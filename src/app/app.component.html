@@ -1,21 +1,50 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+<mat-toolbar [class.mat-elevation-z2]="true">
+  <!-- <mat-icon matTooltip="Welcome" aria-label="Welcome">visibility</mat-icon>
+  Puru Eye Hospital -->
+  <img matTooltip="Welcome" src="../assets/icon.png" style="max-height: 100%;width: auto;">
+  <span flex></span>
+  <a id="no-a-style" href="tel:+91-94140-65020" style="color: #000">
+    <button matTooltip="Call" mat-icon-button>
+      <mat-icon aria-label="Call">call</mat-icon>
+    </button>
+  </a>
+  <button matTooltip="Directions" mat-icon-button (click)="openDirectionsDialog()">
+    <mat-icon aria-label="Get directions">directions</mat-icon>
+  </button>
+</mat-toolbar>
+<div id="banner" style="background: url(../assets/banner.jpg) no-repeat center center fixed;">
+  <img width="100%" src="../assets/banner.jpg" style="visibility: none;" />
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<peh-description></peh-description>
+<br>
+<br>
+<mat-divider></mat-divider>
+<mat-grid-list cols="5" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let tile of data" [colspan]="tile.cols" [rowspan]="tile.rows">
+    <img [src]="tile.background" style="max-height: 100%;width: auto;">
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider>
+<mat-list id="credits">
+  <mat-list-item>Site created by &nbsp;
+    <a target="_blank" href="https://plus.google.com/+PuruVijay">Puru Vijay</a>
+  </mat-list-item>
+  <mat-list-item>
+    <span flex></span>
+    Mail us @ &nbsp;
+    <a href="mailto:vijaydrsandeep@yahoo.co.in">vijaydrsandeep@yaoo.co.in</a>
+  </mat-list-item>
+  <mat-list-item>
+    <span flex></span>
+    Call us @ &nbsp;
+    <a href="tel:0141-2780150">0141-2780150</a>
+  </mat-list-item>
+  <mat-list-item>
+    <span flex></span>
+    <a href="tel:0141-2722823">0141-2722823</a>
+  </mat-list-item>
+  <mat-list-item>
+    <span flex></span>
+    <a href="tel:+91-9414065020">+91-9414065020</a>
+  </mat-list-item>
+</mat-list>

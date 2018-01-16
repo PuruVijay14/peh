@@ -1,18 +1,48 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule, DomSanitizer } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { environment } from "../environments/environment";
+
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+// Ng material
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatTooltipModule,
+  MatSelectModule,
+  MatDialogModule,
+  MatListModule,
+  MatGridListModule
+} from "@angular/material";
+
+import { AppComponent } from "./app.component";
+import { DirectionsComponent } from "./directions/directions.component";
+import { DescriptionComponent } from "./description/description.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, DirectionsComponent, DescriptionComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ServiceWorkerModule.register("/ngsw-worker.js", {
+      enabled: environment.production
+    }),
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DirectionsComponent]
 })
-export class AppModule { }
+export class AppModule {}

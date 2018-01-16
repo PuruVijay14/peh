@@ -1,0 +1,42 @@
+@import "~@angular/material/theming";
+
+mat-toolbar {
+  background: #fff;
+  position: fixed;
+  z-index: 2;
+}
+
+[flex] {
+  flex: 1 1 auto;
+}
+
+#banner {
+  width: 100% !important;
+}
+
+peh-description {
+  text-align: center;
+  padding-top: 50%;
+  font-family: "Roboto";
+}
+
+#credits {
+  background: #eee;
+}
+
+#credits > mat-list-item {
+  font-size: 100%;
+}
+
+a:not(#no-a-style) {
+  color: rgb(88, 88, 88);
+  text-decoration: none;
+  border-spacing: 4px;
+  border-bottom: 3px dotted rgb(88, 88, 88);
+}
+
+a:not(#no-a-style):hover {
+  color: rgb(0, 0, 0);
+  border-spacing: 4px;
+  border-bottom: 3px dotted rgb(0, 0, 0);
+}

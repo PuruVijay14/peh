@@ -1,0 +1,35 @@
+:host {
+  text-align: center;
+  font-family: 'Quicksand' !important;
+}
+
+div {
+  margin: auto;
+  width: 60%;
+  font-size: 150%;
+  line-height: 200%;
+}
+
+a {
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    border-spacing: 4px;
+    border-bottom: 3px dotted rgb(88, 88, 88);
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    border-spacing: 4px;
+    border-bottom: 3px dotted rgb(0, 0, 0);
+}
+
+p {
+    text-align: left;
+}
+
+@media screen and (max-width: 450px) {
+    div {
+        width: 90%;
+        line-height: 150%;
+    }
+}
