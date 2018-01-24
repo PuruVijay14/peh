@@ -1,0 +1,35 @@
+[debug] [2018-01-24T10:08:38.977Z] ----------------------------------------------------------------------
+[debug] [2018-01-24T10:08:38.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dr. Sandeep Vijay\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-01-24T10:08:38.980Z] CLI Version:   3.17.3
+[debug] [2018-01-24T10:08:38.980Z] Platform:      win32
+[debug] [2018-01-24T10:08:38.980Z] Node Version:  v8.9.4
+[debug] [2018-01-24T10:08:38.982Z] Time:          Wed Jan 24 2018 15:38:38 GMT+0530 (India Standard Time)
+[debug] [2018-01-24T10:08:38.982Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-24T10:08:39.008Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-24T10:08:39.008Z] > authorizing via signed-in user
+[debug] [2018-01-24T10:08:39.010Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-24T10:08:39.011Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/UYLLZvzmpzjKVEQTQ68BNYIzWYZNaau6AelxjSFxduMBen3HtdPFYDsQibFVZyl_',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Jan 24 2018 15:38:39 GMT+0530 (India Standard Time)
+[debug] [2018-01-24T10:08:40.673Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-24T10:08:40.712Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pehjaipur  
+  
+ Wed Jan 24 2018 15:38:40 GMT+0530 (India Standard Time)
+[debug] [2018-01-24T10:08:43.147Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-24T10:08:43.148Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pehjaipur/tokens  
+  
+ Wed Jan 24 2018 15:38:43 GMT+0530 (India Standard Time)
+[debug] [2018-01-24T10:08:45.160Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'pehjaipur'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing ./dist directory for upload...
+[debug] [2018-01-24T10:09:02.095Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/pehjaipur/uploads/-L3bd58NQqfy3VCqW3rP?fileCount=24&message=  
+  
+ Wed Jan 24 2018 15:39:02 GMT+0530 (India Standard Time)
